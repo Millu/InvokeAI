@@ -1,6 +1,26 @@
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 import { MenuItem, MenuList } from '@chakra-ui/react';
+import { createSelector } from '@reduxjs/toolkit';
+import { useAppToaster } from 'app/components/Toaster';
+import { RootState, stateSelector } from 'app/store/store';
 import { useAppDispatch, useAppSelector } from 'app/store/storeHooks';
+import { defaultSelectorOptions } from 'app/store/util/defaultMemoizeOptions';
+import { ContextMenu, ContextMenuProps } from 'chakra-ui-contextmenu';
+import {
+  imagesAddedToBatch,
+  selectionAddedToBatch,
+} from 'features/batch/store/batchSlice';
+import {
+  resizeAndScaleCanvas,
+  setInitialCanvasImage,
+} from 'features/canvas/store/canvasSlice';
+import { imageToDeleteSelected } from 'features/imageDeletion/store/imageDeletionSlice';
+import { useRecallParameters } from 'features/parameters/hooks/useRecallParameters';
+import { initialImageSelected } from 'features/parameters/store/actions';
+import { useFeatureStatus } from 'features/system/hooks/useFeatureStatus';
+import { setActiveTab } from 'features/ui/store/uiSlice';
 import { memo, useCallback, useContext } from 'react';
+import { useTranslation } from 'react-i18next';
 import {
   FaExpand,
   FaFolder,
@@ -8,31 +28,11 @@ import {
   FaShare,
   FaTrash,
 } from 'react-icons/fa';
-import { ContextMenu, ContextMenuProps } from 'chakra-ui-contextmenu';
-import {
-  resizeAndScaleCanvas,
-  setInitialCanvasImage,
-} from 'features/canvas/store/canvasSlice';
-import { setActiveTab } from 'features/ui/store/uiSlice';
-import { useTranslation } from 'react-i18next';
-import { ExternalLinkIcon } from '@chakra-ui/icons';
 import { IoArrowUndoCircleOutline } from 'react-icons/io5';
-import { createSelector } from '@reduxjs/toolkit';
-import { useFeatureStatus } from 'features/system/hooks/useFeatureStatus';
-import { useRecallParameters } from 'features/parameters/hooks/useRecallParameters';
-import { initialImageSelected } from 'features/parameters/store/actions';
-import { sentImageToCanvas, sentImageToImg2Img } from '../store/actions';
-import { useAppToaster } from 'app/components/Toaster';
-import { AddImageToBoardContext } from '../../../app/contexts/AddImageToBoardContext';
 import { useRemoveImageFromBoardMutation } from 'services/api/endpoints/boardImages';
 import { ImageDTO } from 'services/api/types';
-import { RootState, stateSelector } from 'app/store/store';
-import {
-  imagesAddedToBatch,
-  selectionAddedToBatch,
-} from 'features/batch/store/batchSlice';
-import { defaultSelectorOptions } from 'app/store/util/defaultMemoizeOptions';
-import { imageToDeleteSelected } from 'features/imageDeletion/store/imageDeletionSlice';
+import { AddImageToBoardContext } from '../../../app/contexts/AddImageToBoardContext';
+import { sentImageToCanvas, sentImageToImg2Img } from '../store/actions';
 
 const selector = createSelector(
   [stateSelector, (state: RootState, imageDTO: ImageDTO) => imageDTO],
@@ -132,8 +132,16 @@ const ImageContextMenu = ({ image, children }: Props) => {
     if (!image.board_id) {
       return;
     }
-    removeFromBoard({ board_id: image.board_id, image_name: image.image_name });
+    removeFromBoard(image.image_name);
   }, [image.board_id, image.image_name, removeFromBoard]);
+
+  const handleAddSelectionToBoard = useCallback(() => {
+    onClickAddToBoard(image);
+  }, [image, onClickAddToBoard]);
+
+  const handleRemoveSelectionFromBoard = useCallback(() => {
+    removeFromBoard(image.image_name);
+  }, [image.image_name, removeFromBoard]);
 
   const handleOpenInNewTab = () => {
     window.open(image.image_url, '_blank');
@@ -217,13 +225,13 @@ const ImageContextMenu = ({ image, children }: Props) => {
                   {t('parameters.sendToUnifiedCanvas')}
                 </MenuItem>
               )}
-              {/* <MenuItem
+              <MenuItem
                 icon={<FaFolder />}
                 isDisabled={isInBatch}
                 onClickCapture={handleAddToBatch}
               >
                 Add to Batch
-              </MenuItem> */}
+              </MenuItem>
               <MenuItem icon={<FaFolder />} onClickCapture={handleAddToBoard}>
                 {image.board_id ? 'Change Board' : 'Add to Board'}
               </MenuItem>
@@ -252,12 +260,12 @@ const ImageContextMenu = ({ image, children }: Props) => {
               >
                 Move Selection to Board
               </MenuItem>
-              {/* <MenuItem
+              <MenuItem
                 icon={<FaFolderPlus />}
                 onClickCapture={handleAddSelectionToBatch}
               >
                 Add Selection to Batch
-              </MenuItem> */}
+              </MenuItem>
               <MenuItem
                 sx={{ color: 'error.600', _dark: { color: 'error.300' } }}
                 icon={<FaTrash />}
