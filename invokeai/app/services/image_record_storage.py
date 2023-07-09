@@ -1,22 +1,16 @@
+import sqlite3
+import threading
 from abc import ABC, abstractmethod
 from datetime import datetime
 from typing import Generic, Optional, TypeVar, cast
-import sqlite3
-import threading
 
 from pydantic import BaseModel, Field
 from pydantic.generics import GenericModel
 
+from invokeai.app.models.image import ImageCategory, ResourceOrigin
 from invokeai.app.models.metadata import ImageMetadata
-from invokeai.app.models.image import (
-    ImageCategory,
-    ResourceOrigin,
-)
 from invokeai.app.services.models.image_record import (
-    ImageRecord,
-    ImageRecordChanges,
-    deserialize_image_record,
-)
+    ImageRecord, ImageRecordChanges, deserialize_image_record)
 
 T = TypeVar("T", bound=BaseModel)
 
@@ -336,11 +330,15 @@ class SqliteImageRecordStorage(ImageRecordStorageBase):
                 query_params.append(is_intermediate)
 
             if board_id is not None:
-                query_conditions += """--sql
-                AND board_images.board_id = ?
-                """
-
-                query_params.append(board_id)
+                if board_id == "none":
+                    query_conditions += """--sql
+                    AND board_images.board_id IS NULL
+                    """
+                else:
+                    query_conditions += """--sql
+                    AND board_images.board_id = ?
+                    """
+                    query_params.append(board_id)
 
             query_pagination = """--sql
             ORDER BY images.created_at DESC LIMIT ? OFFSET ?
