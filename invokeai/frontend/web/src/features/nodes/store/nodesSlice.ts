@@ -118,8 +118,9 @@ const nodesSlice = createSlice({
     ) => {
       state.invocationTemplates = action.payload;
     },
-    nodeEditorReset: () => {
-      return { ...initialNodesState };
+    nodeEditorReset: (state) => {
+      state.nodes = [];
+      state.edges = [];
     },
   },
   extraReducers: (builder) => {
