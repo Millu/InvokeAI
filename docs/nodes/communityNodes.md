@@ -34,7 +34,7 @@ To use a community workflow, download the the `.json` node graph file and load i
 
 
 --------------------------------
-### Depth Map from Wavefront OBJ
+#### Depth Map from Wavefront OBJ
 
 **Description:** Render depth maps from Wavefront .obj files (triangulated) using this simple 3D renderer utilizing numpy and matplotlib to compute and color the scene. There are simple parameters to change the FOV, camera position, and model orientation.
 
@@ -46,14 +46,14 @@ To be imported, an .obj must use triangulated meshes, so make sure to enable tha
 </br><img src="https://raw.githubusercontent.com/dwringer/depth-from-obj-node/main/depth_from_obj_usage.jpg" width="500" />
 
 --------------------------------
-### Film Grain
+#### Film Grain
 
 **Description:** This node adds a film grain effect to the input image based on the weights, seeds, and blur radii parameters. It works with RGB input images only.
 
 **Node Link:** https://github.com/JPPhoto/film-grain-node
 
 --------------------------------
-### Generative Grammar-Based Prompt Nodes
+#### Generative Grammar-Based Prompt Nodes
 
 **Description:** This set of 3 nodes generates prompts from simple user-defined grammar rules (loaded from custom files - examples provided below). The prompts are made by recursively expanding a special template string, replacing nonterminal "parts-of-speech" until no nonterminal terms remain in the string.
 
@@ -68,7 +68,7 @@ This includes 3 Nodes:
 </br><img src="https://raw.githubusercontent.com/dwringer/generative-grammar-prompt-nodes/main/lookuptables_usage.jpg" width="500" />
 
 --------------------------------
-### GPT2RandomPromptMaker
+#### GPT2RandomPromptMaker
 
 **Description:** A node for InvokeAI utilizes the GPT-2 language model to generate random prompts based on a provided seed and context.
 
@@ -81,7 +81,7 @@ Generated Prompt: An enchanted weapon will be usable by any character regardless
 <img src="https://github.com/mickr777/InvokeAI/assets/115216705/8496ba09-bcdd-4ff7-8076-ff213b6a1e4c" width="200" />
 
 --------------------------------
-### Grid to Gif
+#### Grid to Gif
 
 **Description:** One node that turns a grid image into an image collection, one node that turns an image collection into a gif.
 
@@ -95,7 +95,7 @@ Generated Prompt: An enchanted weapon will be usable by any character regardless
 <img src="https://raw.githubusercontent.com/mildmisery/invokeai-GridToGifNode/main/output.gif" width="300" />
 
 --------------------------------
-### Halftone
+#### Halftone
 
 **Description**: Halftone converts the source image to grayscale and then performs halftoning. CMYK Halftone converts the image to CMYK and applies a per-channel halftoning to make the source image look like a magazine or newspaper. For both nodes, you can specify angles and halftone dot spacing.
 
@@ -116,14 +116,14 @@ CMYK Halftone Output:
 <img src="https://github.com/invoke-ai/InvokeAI/assets/34005131/c59c578f-db8e-4d66-8c66-2851752d75ea" width="300" />
 
 --------------------------------
-### Ideal Size
+#### Ideal Size
 
 **Description:** This node calculates an ideal image size for a first pass of a multi-pass upscaling. The aim is to avoid duplication that results from choosing a size larger than the model is capable of.
 
 **Node Link:** https://github.com/JPPhoto/ideal-size-node
 
 --------------------------------
-### Image and Mask Composition Pack
+#### Image and Mask Composition Pack
 
 **Description:** This is a pack of nodes for composing masks and images, including a simple text mask creator and both image and latent offset nodes. The offsets wrap around, so these can be used in conjunction with the Seamless node to progressively generate centered on different parts of the seamless tiling.
 
@@ -150,7 +150,7 @@ This includes 15 Nodes:
 </br><img src="https://raw.githubusercontent.com/dwringer/composition-nodes/main/composition_pack_overview.jpg" width="500" />
 
 --------------------------------
-### Image to Character Art Image Nodes
+#### Image to Character Art Image Nodes
 
 **Description:** Group of nodes to convert an input image into ascii/unicode art Image
 
@@ -164,14 +164,14 @@ This includes 15 Nodes:
 
 --------------------------------
 
-### Image Picker
+#### Image Picker
 
 **Description:** This InvokeAI node takes in a collection of images and randomly chooses one. This can be useful when you have a number of poses to choose from for a ControlNet node, or a number of input images for another purpose.
 
 **Node Link:** https://github.com/JPPhoto/image-picker-node
 
 --------------------------------
-### Load Video Frame
+#### Load Video Frame
 
 **Description:** This is a video frame image provider + indexer/video creation nodes for hooking up to iterators and ranges and ControlNets and such for invokeAI node experimentation. Think animation + ControlNet outputs.
 
@@ -185,7 +185,7 @@ This includes 15 Nodes:
 [Full mp4 of Example Output test.mp4](https://github.com/helix4u/load_video_frame/blob/main/test.mp4)
 
 --------------------------------
-### Make 3D
+#### Make 3D
 
 **Description:** Create compelling 3D stereo images from 2D originals.
 
@@ -199,7 +199,7 @@ This includes 15 Nodes:
 <img src="https://gitlab.com/srcrr/shift3d/-/raw/main/example-2.png" width="300" />
 
 --------------------------------
-### Oobabooga
+#### Oobabooga
 
 **Description:** asks a local LLM running in Oobabooga's Text-Generation-Webui to write a prompt based on the user input.
 
@@ -225,7 +225,7 @@ a Text-Generation-Webui instance (might work remotely too, but I never tried it)
 This node works best with SDXL models, especially as the style can be described independently of the LLM's output.
 
 --------------------------------
-### Prompt Tools 
+#### Prompt Tools 
 
 **Description:** A set of InvokeAI nodes that add general prompt manipulation tools.  These were written to accompany the PromptsFromFile node and other prompt generation nodes.
 
@@ -244,7 +244,7 @@ See full docs here: https://github.com/skunkworxdark/Prompt-tools-nodes/edit/mai
 **Node Link:** https://github.com/skunkworxdark/Prompt-tools-nodes
 
 --------------------------------
-### Retroize
+#### Retroize
 
 **Description:** Retroize is a collection of nodes for InvokeAI to "Retroize" images. Any image can be given a fresh coat of retro paint with these nodes, either from your gallery or from within the graph itself. It includes nodes to pixelize, quantize, palettize, and ditherize images; as well as to retrieve palettes from existing images.
 
@@ -255,7 +255,7 @@ See full docs here: https://github.com/skunkworxdark/Prompt-tools-nodes/edit/mai
 <img src="https://github.com/Ar7ific1al/InvokeAI_nodes_retroize/assets/2306586/de8b4fa6-324c-4c2d-b36c-297600c73974" width="500" />
 
 --------------------------------
-### Size Stepper Nodes
+#### Size Stepper Nodes
 
 **Description:** This is a set of nodes for calculating the necessary size increments for doing upscaling workflows. Use the *Final Size & Orientation* node to enter your full size dimensions and orientation (portrait/landscape/random), then plug that and your initial generation dimensions into the *Ideal Size Stepper* and get 1, 2, or 3 intermediate pairs of dimensions for upscaling. Note this does not output the initial size or full size dimensions: the 1, 2, or 3 outputs of this node are only the intermediate sizes.
 
@@ -267,7 +267,7 @@ A third node is included, *Random Switch (Integers)*, which is just a generic ve
 </br><img src="https://raw.githubusercontent.com/dwringer/size-stepper-nodes/main/size_nodes_usage.jpg" width="500" />
 
 --------------------------------
-### Text font to Image
+#### Text font to Image
 
 **Description:** text font to text image node for InvokeAI, download a font to use (or if in font cache uses it from there), the text is always resized to the image size, but can control that with padding, optional 2nd line
 
@@ -284,7 +284,7 @@ Results after using the depth controlnet
 <img src="https://github.com/mickr777/InvokeAI/assets/115216705/2befcb6d-49f4-4bfd-b5fc-1fee19274f89" width="300" />
 
 --------------------------------
-### Thresholding
+#### Thresholding
 
 **Description:** This node generates masks for highlights, midtones, and shadows given an input image. You can optionally specify a blur for the lookup table used in making those masks from the source image.
 
@@ -309,7 +309,7 @@ Highlights/Midtones/Shadows (with LUT blur enabled):
 <img src="https://github.com/invoke-ai/InvokeAI/assets/34005131/0701fd0f-2ca7-4fe2-8613-2b52547bafce" width="300" />
 
 --------------------------------
-### XY Image to Grid and Images to Grids nodes
+#### XY Image to Grid and Images to Grids nodes
 
 **Description:** Image to grid nodes and supporting tools.
 

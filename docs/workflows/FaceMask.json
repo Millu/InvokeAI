@@ -1,7 +1,7 @@
 {
   "name": "FaceMask",
   "author": "YMGenesis",
-  "description": "21 September 2023\n\nPlace an image with recognizable face(s) in Image Primitive, and write what sort of new face you want in the top prompt text box. See Notes for more info.",
+  "description": "Place an image with recognizable face(s) in Image Primitive, and write what sort of new face you want in the top prompt text box. See Notes for more info.",
   "version": "1.0",
   "contact": "YMGenesis on InvokeAI Discord",
   "tags": "facemask, facetools",
@@ -56,8 +56,8 @@
         "notes": "",
         "embedWorkflow": false,
         "isIntermediate": true,
-        "version": "1.0.0",
-        "useCache": true
+        "useCache": true,
+        "version": "1.0.0"
       },
       "width": 320,
       "height": 226,
@@ -102,11 +102,11 @@
         "notes": "",
         "embedWorkflow": false,
         "isIntermediate": true,
-        "version": "1.0.0",
-        "useCache": true
+        "useCache": true,
+        "version": "1.0.0"
       },
       "width": 320,
-      "height": 259,
+      "height": 261,
       "position": {
         "x": 5025,
         "y": 1275
@@ -148,11 +148,11 @@
         "notes": "",
         "embedWorkflow": false,
         "isIntermediate": true,
-        "version": "1.0.0",
-        "useCache": true
+        "useCache": true,
+        "version": "1.0.0"
       },
       "width": 320,
-      "height": 259,
+      "height": 261,
       "position": {
         "x": 5025,
         "y": 1550
@@ -223,11 +223,11 @@
         "notes": "",
         "embedWorkflow": false,
         "isIntermediate": true,
-        "version": "1.0.0",
-        "useCache": true
+        "useCache": true,
+        "version": "1.0.0"
       },
       "width": 320,
-      "height": 388,
+      "height": 389,
       "position": {
         "x": 5425,
         "y": 1525
@@ -296,11 +296,11 @@
         "notes": "",
         "embedWorkflow": false,
         "isIntermediate": true,
-        "version": "1.0.0",
-        "useCache": true
+        "useCache": true,
+        "version": "1.0.0"
       },
       "width": 320,
-      "height": 266,
+      "height": 267,
       "position": {
         "x": 5825,
         "y": 1275
@@ -343,8 +343,8 @@
         "notes": "",
         "embedWorkflow": false,
         "isIntermediate": true,
-        "version": "1.0.0",
-        "useCache": false
+        "useCache": false,
+        "version": "1.0.0"
       },
       "width": 320,
       "height": 218,
@@ -411,14 +411,14 @@
         "notes": "",
         "embedWorkflow": false,
         "isIntermediate": true,
-        "version": "1.0.0",
-        "useCache": true
+        "useCache": true,
+        "version": "1.0.0"
       },
       "width": 320,
-      "height": 316,
+      "height": 318,
       "position": {
-        "x": 5025,
-        "y": 2175
+        "x": 5020.486775480401,
+        "y": 1879.3837939662353
       }
     },
     {
@@ -461,8 +461,8 @@
         "notes": "",
         "embedWorkflow": false,
         "isIntermediate": true,
-        "version": "1.0.0",
-        "useCache": true
+        "useCache": true,
+        "version": "1.0.0"
       },
       "width": 320,
       "height": 225,
@@ -533,8 +533,8 @@
         "notes": "",
         "embedWorkflow": true,
         "isIntermediate": false,
-        "version": "1.0.0",
-        "useCache": true
+        "useCache": true,
+        "version": "1.0.0"
       },
       "width": 320,
       "height": 396,
@@ -602,15 +602,15 @@
           }
         },
         "label": "",
-        "isOpen": true,
+        "isOpen": false,
         "notes": "",
         "embedWorkflow": false,
         "isIntermediate": true,
-        "version": "1.0.0",
-        "useCache": true
+        "useCache": true,
+        "version": "1.0.0"
       },
       "width": 320,
-      "height": 323,
+      "height": 32,
       "position": {
         "x": 5025,
         "y": 1825
@@ -710,56 +710,56 @@
         "notes": "",
         "embedWorkflow": false,
         "isIntermediate": true,
-        "version": "1.0.0",
-        "useCache": true
+        "useCache": true,
+        "version": "1.0.0"
       },
       "width": 320,
-      "height": 583,
+      "height": 585,
       "position": {
         "x": 4625,
-        "y": 1900
+        "y": 1818.90048444855
       }
     },
     {
-      "id": "441fdd15-1a49-413c-bd2a-637a105ad370",
+      "id": "d14b4d95-bf74-4ec5-827b-4c9e797c7ae9",
       "type": "invocation",
       "data": {
-        "id": "441fdd15-1a49-413c-bd2a-637a105ad370",
+        "id": "d14b4d95-bf74-4ec5-827b-4c9e797c7ae9",
         "type": "denoise_latents",
         "inputs": {
           "noise": {
-            "id": "86b6226c-1780-49d7-bbed-c4a5440eebb2",
+            "id": "175b4d0a-3017-46e2-933f-c02f1cfb29b2",
             "name": "noise",
             "type": "LatentsField",
             "fieldKind": "input",
             "label": ""
           },
           "steps": {
-            "id": "f3cae478-9f7c-4836-b8f8-3a83ef2fdcc3",
+            "id": "dd174b3e-3f6c-46cb-a703-3c6f3b3c72f1",
             "name": "steps",
             "type": "integer",
             "fieldKind": "input",
             "label": "",
-            "value": 20
+            "value": 10
           },
           "cfg_scale": {
-            "id": "f7d64dc5-ea3d-44a8-8951-56622f0548ee",
+            "id": "0ea30aa7-8747-4c93-87e8-3c84e0dfd187",
             "name": "cfg_scale",
             "type": "FloatPolymorphic",
             "fieldKind": "input",
             "label": "",
-            "value": 5
+            "value": 7.5
           },
           "denoising_start": {
-            "id": "01409326-116d-41b5-9c3d-abaa2a5182aa",
+            "id": "a6392edb-8895-41ed-918b-0ba8d2ac72ac",
             "name": "denoising_start",
             "type": "float",
             "fieldKind": "input",
             "label": "",
-            "value": 0.3
+            "value": 0
           },
           "denoising_end": {
-            "id": "445b857b-a136-4736-b677-b2a701d651d4",
+            "id": "1d1807cc-a24d-426e-9de5-a7e61d45c006",
             "name": "denoising_end",
             "type": "float",
             "fieldKind": "input",
@@ -767,7 +767,7 @@
             "value": 1
           },
           "scheduler": {
-            "id": "8e7d75ef-6cf0-467e-8067-595bb96c9636",
+            "id": "947a5212-8923-4d5d-934c-dbc5879b9d07",
             "name": "scheduler",
             "type": "Scheduler",
             "fieldKind": "input",
@@ -775,49 +775,56 @@
             "value": "euler"
           },
           "control": {
-            "id": "ad0c589a-b5e9-4892-9173-a709ee8672db",
+            "id": "585378b9-2686-4573-b762-3dc2d6179193",
             "name": "control",
             "type": "ControlPolymorphic",
             "fieldKind": "input",
             "label": ""
           },
           "ip_adapter": {
-            "id": "843f92c7-2714-46ea-ab9d-fc568aa684f3",
+            "id": "191f4687-fdcc-45da-859f-71fd5091a8bd",
             "name": "ip_adapter",
-            "type": "IPAdapterField",
+            "type": "IPAdapterPolymorphic",
+            "fieldKind": "input",
+            "label": ""
+          },
+          "t2i_adapter": {
+            "id": "39fc54ae-2141-4cab-9c01-c6c415f964cd",
+            "name": "t2i_adapter",
+            "type": "T2IAdapterPolymorphic",
             "fieldKind": "input",
             "label": ""
           },
           "latents": {
-            "id": "d21e2b79-344d-438f-8841-c5c2dcb82e77",
+            "id": "7f1a388e-8355-496c-a45d-fce5b8685a63",
             "name": "latents",
             "type": "LatentsField",
             "fieldKind": "input",
             "label": ""
           },
           "denoise_mask": {
-            "id": "e8cf20d0-76e0-4543-b11f-2a4d209a6489",
+            "id": "de922941-b2d8-4c57-92a7-201f9ddaf262",
             "name": "denoise_mask",
             "type": "DenoiseMaskField",
             "fieldKind": "input",
             "label": ""
           },
           "positive_conditioning": {
-            "id": "3ab3bd3b-4ecd-4b87-9ab3-5de24828f3cd",
+            "id": "2b42b4e8-4795-4fcc-bef1-c08cb8e25e0a",
             "name": "positive_conditioning",
             "type": "ConditioningField",
             "fieldKind": "input",
             "label": ""
           },
           "negative_conditioning": {
-            "id": "6e2907e9-779d-4984-9c79-6032bf75ab0c",
+            "id": "ff29b7d7-1bff-4aa9-b5c0-f8786a55023a",
             "name": "negative_conditioning",
             "type": "ConditioningField",
             "fieldKind": "input",
             "label": ""
           },
           "unet": {
-            "id": "bb038dd9-cb2e-41df-a830-a5e1d5696c31",
+            "id": "0155f1cb-152b-4097-9395-afcc745c697b",
             "name": "unet",
             "type": "UNetField",
             "fieldKind": "input",
@@ -826,19 +833,19 @@
         },
         "outputs": {
           "latents": {
-            "id": "82c61fed-7cf5-44d4-8d00-f42350619487",
+            "id": "03cfb327-02a1-4fbe-b7ce-b07fd501d2b8",
             "name": "latents",
             "type": "LatentsField",
             "fieldKind": "output"
           },
           "width": {
-            "id": "73ab2f4f-898f-44a1-a46c-c0d4aaa9c2e3",
+            "id": "3ffb87d7-b5a6-4b35-bdf1-2bb9b718d815",
             "name": "width",
             "type": "integer",
             "fieldKind": "output"
           },
           "height": {
-            "id": "92b783b2-8741-4089-8125-1ff2f2d15372",
+            "id": "2c1f0588-943a-4fd1-b75b-48d04c944296",
             "name": "height",
             "type": "integer",
             "fieldKind": "output"
@@ -849,14 +856,14 @@
         "notes": "",
         "embedWorkflow": false,
         "isIntermediate": true,
-        "version": "1.1.0",
-        "useCache": true
+        "useCache": true,
+        "version": "1.3.0"
       },
       "width": 320,
-      "height": 614,
+      "height": 646,
       "position": {
-        "x": 5425,
-        "y": 1925
+        "x": 5429.143041954983,
+        "y": 1945.5410439914388
       }
     }
   ],
@@ -982,59 +989,59 @@
       "type": "default"
     },
     {
-      "source": "a6d08bcb-0b52-4dd8-9247-8b6480238c6d",
+      "source": "d14b4d95-bf74-4ec5-827b-4c9e797c7ae9",
       "sourceHandle": "latents",
-      "target": "441fdd15-1a49-413c-bd2a-637a105ad370",
+      "target": "3b2ebc7f-251d-4726-b1b8-5331355f8626",
       "targetHandle": "latents",
-      "id": "reactflow__edge-a6d08bcb-0b52-4dd8-9247-8b6480238c6dlatents-441fdd15-1a49-413c-bd2a-637a105ad370latents",
-      "type": "default"
-    },
-    {
-      "source": "fb7e72d9-51cb-432a-b511-c6c608d07413",
-      "sourceHandle": "conditioning",
-      "target": "441fdd15-1a49-413c-bd2a-637a105ad370",
-      "targetHandle": "positive_conditioning",
-      "id": "reactflow__edge-fb7e72d9-51cb-432a-b511-c6c608d07413conditioning-441fdd15-1a49-413c-bd2a-637a105ad370positive_conditioning",
-      "type": "default"
-    },
-    {
-      "source": "7c4e5071-5b76-4d42-b340-68b52c5ded7a",
-      "sourceHandle": "conditioning",
-      "target": "441fdd15-1a49-413c-bd2a-637a105ad370",
-      "targetHandle": "negative_conditioning",
-      "id": "reactflow__edge-7c4e5071-5b76-4d42-b340-68b52c5ded7aconditioning-441fdd15-1a49-413c-bd2a-637a105ad370negative_conditioning",
+      "id": "reactflow__edge-d14b4d95-bf74-4ec5-827b-4c9e797c7ae9latents-3b2ebc7f-251d-4726-b1b8-5331355f8626latents",
       "type": "default"
     },
     {
       "source": "c9897be0-7f59-4388-816d-86cb72cc4036",
       "sourceHandle": "unet",
-      "target": "441fdd15-1a49-413c-bd2a-637a105ad370",
+      "target": "d14b4d95-bf74-4ec5-827b-4c9e797c7ae9",
       "targetHandle": "unet",
-      "id": "reactflow__edge-c9897be0-7f59-4388-816d-86cb72cc4036unet-441fdd15-1a49-413c-bd2a-637a105ad370unet",
+      "id": "reactflow__edge-c9897be0-7f59-4388-816d-86cb72cc4036unet-d14b4d95-bf74-4ec5-827b-4c9e797c7ae9unet",
+      "type": "default"
+    },
+    {
+      "source": "7c4e5071-5b76-4d42-b340-68b52c5ded7a",
+      "sourceHandle": "conditioning",
+      "target": "d14b4d95-bf74-4ec5-827b-4c9e797c7ae9",
+      "targetHandle": "negative_conditioning",
+      "id": "reactflow__edge-7c4e5071-5b76-4d42-b340-68b52c5ded7aconditioning-d14b4d95-bf74-4ec5-827b-4c9e797c7ae9negative_conditioning",
+      "type": "default"
+    },
+    {
+      "source": "fb7e72d9-51cb-432a-b511-c6c608d07413",
+      "sourceHandle": "conditioning",
+      "target": "d14b4d95-bf74-4ec5-827b-4c9e797c7ae9",
+      "targetHandle": "positive_conditioning",
+      "id": "reactflow__edge-fb7e72d9-51cb-432a-b511-c6c608d07413conditioning-d14b4d95-bf74-4ec5-827b-4c9e797c7ae9positive_conditioning",
       "type": "default"
     },
     {
       "source": "098898c8-7a20-4d78-9363-296d42e3d8da",
       "sourceHandle": "noise",
-      "target": "441fdd15-1a49-413c-bd2a-637a105ad370",
+      "target": "d14b4d95-bf74-4ec5-827b-4c9e797c7ae9",
       "targetHandle": "noise",
-      "id": "reactflow__edge-098898c8-7a20-4d78-9363-296d42e3d8danoise-441fdd15-1a49-413c-bd2a-637a105ad370noise",
+      "id": "reactflow__edge-098898c8-7a20-4d78-9363-296d42e3d8danoise-d14b4d95-bf74-4ec5-827b-4c9e797c7ae9noise",
       "type": "default"
     },
     {
       "source": "bcbdc4ea-1fad-40d4-8632-70f84116f4b6",
       "sourceHandle": "denoise_mask",
-      "target": "441fdd15-1a49-413c-bd2a-637a105ad370",
+      "target": "d14b4d95-bf74-4ec5-827b-4c9e797c7ae9",
       "targetHandle": "denoise_mask",
-      "id": "reactflow__edge-bcbdc4ea-1fad-40d4-8632-70f84116f4b6denoise_mask-441fdd15-1a49-413c-bd2a-637a105ad370denoise_mask",
+      "id": "reactflow__edge-bcbdc4ea-1fad-40d4-8632-70f84116f4b6denoise_mask-d14b4d95-bf74-4ec5-827b-4c9e797c7ae9denoise_mask",
       "type": "default"
     },
     {
-      "source": "441fdd15-1a49-413c-bd2a-637a105ad370",
+      "source": "a6d08bcb-0b52-4dd8-9247-8b6480238c6d",
       "sourceHandle": "latents",
-      "target": "3b2ebc7f-251d-4726-b1b8-5331355f8626",
+      "target": "d14b4d95-bf74-4ec5-827b-4c9e797c7ae9",
       "targetHandle": "latents",
-      "id": "reactflow__edge-441fdd15-1a49-413c-bd2a-637a105ad370latents-3b2ebc7f-251d-4726-b1b8-5331355f8626latents",
+      "id": "reactflow__edge-a6d08bcb-0b52-4dd8-9247-8b6480238c6dlatents-d14b4d95-bf74-4ec5-827b-4c9e797c7ae9latents",
       "type": "default"
     }
   ]
