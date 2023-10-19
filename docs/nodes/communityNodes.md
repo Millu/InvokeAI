@@ -32,7 +32,6 @@ To use a community workflow, download the the `.json` node graph file and load i
 - [Disclaimer](#disclaimer)
 - [Help](#help)
 
-
 --------------------------------
 #### Depth Map from Wavefront OBJ
 
