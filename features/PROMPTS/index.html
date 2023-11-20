@@ -12,20 +12,25 @@
       
         <link rel="canonical" href="https://invoke-ai.github.io/InvokeAI/features/PROMPTS/">
       
+      
+        <link rel="prev" href="../POSTPROCESS/">
+      
+      
+        <link rel="next" href="../TEXTUAL_INVERSIONS/">
+      
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-9.1.19">
     
     
       
-        <title>Prompting-Features - InvokeAI Stable Diffusion Toolkit Docs</title>
+        <title>Prompting-Features - InvokeAI Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.975780f9.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eebd395e.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.2505c338.min.css">
-        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ecc896b0.min.css">
       
       
 
@@ -44,6 +49,18 @@
     <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-2X4JR4S4FB"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-2X4JR4S4FB",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-2X4JR4S4FB",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
 
     
     
@@ -58,7 +75,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent="">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
     
@@ -82,9 +99,11 @@
     
       
 
-<header class="md-header" data-md-component="header">
+  
+
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="InvokeAI Stable Diffusion Toolkit Docs" class="md-header__button md-logo" aria-label="InvokeAI Stable Diffusion Toolkit Docs" data-md-component="logo">
+    <a href="../.." title="InvokeAI Documentation" class="md-header__button md-logo" aria-label="InvokeAI Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
@@ -97,7 +116,7 @@
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
           <span class="md-ellipsis">
-            InvokeAI Stable Diffusion Toolkit Docs
+            InvokeAI Documentation
           </span>
         </div>
         <div class="md-header__topic" data-md-component="header-topic">
@@ -110,29 +129,31 @@
       </div>
     </div>
     
-      <form class="md-header__option" data-md-component="palette">
-        
+      
+        <form class="md-header__option" data-md-component="palette">
           
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+            
+              <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
+              </label>
+            
           
+            
+            
+            
+            <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+            
+              <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
+              </label>
+            
           
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="" data-md-color-accent=""  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
-          
-            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 0-7 7c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.26c1.81-1.27 3-3.36 3-5.74a7 7 0 0 0-7-7M9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1Z"/></svg>
-            </label>
-          
-        
-          
-          
-          
-          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent=""  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
-          
-            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 0 1-1 1H9a1 1 0 0 1-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7M9 21v-1h6v1a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1m3-17a5 5 0 0 0-5 5c0 2.05 1.23 3.81 3 4.58V16h4v-2.42c1.77-.77 3-2.53 3-4.58a5 5 0 0 0-5-5Z"/></svg>
-            </label>
-          
-        
-      </form>
+        </form>
+      
     
     
     
@@ -164,7 +185,7 @@
           <div class="md-search-result__meta">
             Initializing search
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
@@ -176,7 +197,7 @@
         <a href="https://github.com/invoke-ai/InvokeAI" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     invoke-ai/InvokeAI
@@ -186,16 +207,10 @@
     
   </nav>
   
-</header>
     
-    <div class="md-container" data-md-component="container">
       
-      
-        
-          
-            
 <nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
-  <div class="md-tabs__inner md-grid">
+  <div class="md-grid">
     <ul class="md-tabs__list">
       
         
@@ -215,11 +230,15 @@
   
 
 
-  <li class="md-tabs__item">
-    <a href="../../CHANGELOG/" class="md-tabs__link">
-      Changelog
-    </a>
-  </li>
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../installation/INSTALLATION/" class="md-tabs__link">
+        Installation
+      </a>
+    </li>
+  
 
       
         
@@ -231,8 +250,8 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../contributing/ARCHITECTURE/" class="md-tabs__link">
-        Contributing
+      <a href="../../nodes/communityNodes/" class="md-tabs__link">
+        Workflows & Nodes
       </a>
     </li>
   
@@ -265,8 +284,36 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../help/SAMPLER_CONVERGENCE/" class="md-tabs__link">
-        Help
+      <a href="../../contributing/CONTRIBUTING/" class="md-tabs__link">
+        Contributing
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../../CHANGELOG/" class="md-tabs__link">
+      Changelog
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../deprecated/CLI/" class="md-tabs__link">
+        Deprecated
       </a>
     </li>
   
@@ -281,8 +328,8 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../installation/" class="md-tabs__link">
-        Installation
+      <a href="../../help/gettingStartedWithAI/" class="md-tabs__link">
+        Help
       </a>
     </li>
   
@@ -307,7 +354,13 @@
     </ul>
   </div>
 </nav>
-          
+    
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
         
       
       <main class="md-main" data-md-component="main">
@@ -327,20 +380,20 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="InvokeAI Stable Diffusion Toolkit Docs" class="md-nav__button md-logo" aria-label="InvokeAI Stable Diffusion Toolkit Docs" data-md-component="logo">
+    <a href="../.." title="InvokeAI Documentation" class="md-nav__button md-logo" aria-label="InvokeAI Documentation" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
 
     </a>
-    InvokeAI Stable Diffusion Toolkit Docs
+    InvokeAI Documentation
   </label>
   
     <div class="md-nav__source">
       <a href="https://github.com/invoke-ai/InvokeAI" title="Go to repository" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
   </div>
   <div class="md-source__repository">
     invoke-ai/InvokeAI
@@ -372,619 +425,45 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../../CHANGELOG/" class="md-nav__link">
-        Changelog
-      </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
     
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
       
       
-      
-      
-        <label class="md-nav__link" for="__nav_3">
-          Contributing
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Contributing" data-md-level="1">
-        <label class="md-nav__title" for="__nav_3">
-          <span class="md-nav__icon md-icon"></span>
-          Contributing
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../contributing/ARCHITECTURE/" class="md-nav__link">
-        Invoke.AI Architecture
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../contributing/INVOCATIONS/" class="md-nav__link">
-        Invocations
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../contributing/LOCAL_DEVELOPMENT/" class="md-nav__link">
-        Local Development
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-    
-  
-  
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_4">
-          Features
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Features" data-md-level="1">
-        <label class="md-nav__title" for="__nav_4">
-          <span class="md-nav__icon md-icon"></span>
-          Features
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
-        Overview
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../CLI/" class="md-nav__link">
-        Command-Line Interface
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../CONCEPTS/" class="md-nav__link">
-        Concepts Library
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../EMBIGGEN/" class="md-nav__link">
-        Embiggen
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../IMG2IMG/" class="md-nav__link">
-        Image-to-Image
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../INPAINTING/" class="md-nav__link">
-        Inpainting
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../MODEL_MERGING/" class="md-nav__link">
-        Model Merging
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../NSFW/" class="md-nav__link">
-        The NSFW Checker
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../OTHER/" class="md-nav__link">
-        Others
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../OUTPAINTING/" class="md-nav__link">
-        Outpainting
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../POSTPROCESS/" class="md-nav__link">
-        Postprocessing
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
       
       
         
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Prompting-Features
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
-        Prompting-Features
-      </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#reading-prompts-from-a-file" class="md-nav__link">
-    Reading Prompts from a File
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#negative-and-unconditioned-prompts" class="md-nav__link">
-    Negative and Unconditioned Prompts
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prompt-syntax-features" class="md-nav__link">
-    Prompt Syntax Features
-  </a>
-  
-    <nav class="md-nav" aria-label="Prompt Syntax Features">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#attention-weighting" class="md-nav__link">
-    Attention weighting
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#blending-between-prompts" class="md-nav__link">
-    Blending between prompts
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cross-attention-control-prompt2prompt" class="md-nav__link">
-    Cross-Attention Control ('prompt2prompt')
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#escaping-parantheses-and-speech-marks" class="md-nav__link">
-    Escaping parantheses () and speech marks ""
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#prompt-blending" class="md-nav__link">
-    Prompt Blending
-  </a>
-  
-    <nav class="md-nav" aria-label="Prompt Blending">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#blue-sphere-red-cube-hybrid" class="md-nav__link">
-    "blue sphere, red cube, hybrid"
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#blue-sphere025-red-cube075-hybrid" class="md-nav__link">
-    "blue sphere:0.25 red cube:0.75 hybrid"
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#blue-sphere075-red-cube025-hybrid" class="md-nav__link">
-    "blue sphere:0.75 red cube:0.25 hybrid"
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#blue-sphere05-red-cube05-hybrid" class="md-nav__link">
-    "blue sphere:0.5 red cube:0.5 hybrid"
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#blue-sphere05-red-cube05" class="md-nav__link">
-    "blue sphere:0.5 red cube:0.5"
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
-    </li>
-  
-
-            
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../TEXTUAL_INVERSION/" class="md-nav__link">
-        Textual-Inversion
-      </a>
-    </li>
-  
-
-            
+        
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../UNIFIED_CANVAS/" class="md-nav__link">
-        Unified Canvas
-      </a>
-    </li>
-  
-
-            
+        
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../VARIATIONS/" class="md-nav__link">
-        Variations
-      </a>
-    </li>
-  
-
-            
+        
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WEB/" class="md-nav__link">
-        InvokeAI Web Server
-      </a>
-    </li>
-  
-
-            
+        
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../WEBUIHOTKEYS/" class="md-nav__link">
-        WebUI Hotkey List
-      </a>
-    </li>
-  
-
-            
+        
           
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5">
-          Help
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Help" data-md-level="1">
-        <label class="md-nav__title" for="__nav_5">
-          <span class="md-nav__icon md-icon"></span>
-          Help
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../help/SAMPLER_CONVERGENCE/" class="md-nav__link">
-        Sampler Convergence
-      </a>
-    </li>
-  
-
-            
+        
           
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5_2" type="checkbox" id="__nav_5_2" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_5_2">
-          Deprecated
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Deprecated" data-md-level="2">
-        <label class="md-nav__title" for="__nav_5_2">
-          <span class="md-nav__icon md-icon"></span>
-          Deprecated
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
+        
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../help/deprecated/TROUBLESHOOT/" class="md-nav__link">
-        F.A.Q.
-      </a>
-    </li>
-  
-
-            
+        
           
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
+        
       
       
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6">
+        <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
           Installation
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Installation" data-md-level="1">
-        <label class="md-nav__title" for="__nav_6">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
           Installation
         </label>
@@ -996,7 +475,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../installation/" class="md-nav__link">
+      <a href="../../installation/INSTALLATION/" class="md-nav__link">
         Overview
       </a>
     </li>
@@ -1107,48 +586,15 @@
   
   
   
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_9" type="checkbox" id="__nav_6_9" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_6_9">
-          Developers documentation
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Developers documentation" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_9">
-          <span class="md-nav__icon md-icon"></span>
-          Developers documentation
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
     <li class="md-nav__item">
       <a href="../../installation/Developers_documentation/BUILDING_BINARY_INSTALLERS/" class="md-nav__link">
-        build binary installers
+        Developers Documentation
       </a>
     </li>
   
 
             
           
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
             
               
   
@@ -1158,20 +604,37 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6_10" type="checkbox" id="__nav_6_10" >
       
       
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
       
       
-        <label class="md-nav__link" for="__nav_6_10">
-          Deprecated documentation
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
+          Deprecated Documentation
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Deprecated documentation" data-md-level="2">
-        <label class="md-nav__title" for="__nav_6_10">
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_2_10">
           <span class="md-nav__icon md-icon"></span>
-          Deprecated documentation
+          Deprecated Documentation
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -1182,7 +645,7 @@
   
     <li class="md-nav__item">
       <a href="../../installation/deprecated_documentation/INSTALL_BINARY/" class="md-nav__link">
-        InvokeAI Binary Installer
+        Binary Installer
       </a>
     </li>
   
@@ -1196,7 +659,7 @@
   
     <li class="md-nav__item">
       <a href="../../installation/deprecated_documentation/INSTALL_JUPYTER/" class="md-nav__link">
-        Running InvokeAI on Google Colab using a Jupyter Notebook
+        Runninng InvokeAI on Google Colab
       </a>
     </li>
   
@@ -1210,7 +673,7 @@
   
     <li class="md-nav__item">
       <a href="../../installation/deprecated_documentation/INSTALL_LINUX/" class="md-nav__link">
-        Manual Installation, Linux
+        Manual Installation on Linux
       </a>
     </li>
   
@@ -1224,7 +687,21 @@
   
     <li class="md-nav__item">
       <a href="../../installation/deprecated_documentation/INSTALL_MAC/" class="md-nav__link">
-        Manual Installation, macOS
+        Manual Installation on macOS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../installation/deprecated_documentation/INSTALL_WINDOWS/" class="md-nav__link">
+        Manual Installation on Windows
       </a>
     </li>
   
@@ -1238,7 +715,7 @@
   
     <li class="md-nav__item">
       <a href="../../installation/deprecated_documentation/INSTALL_PCP/" class="md-nav__link">
-        Installing InvokeAI with the Pre-Compiled PIP Installer
+        Installing Invoke with pip
       </a>
     </li>
   
@@ -1259,20 +736,6 @@
 
             
           
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../installation/deprecated_documentation/INSTALL_WINDOWS/" class="md-nav__link">
-        Manual Installation, Windows
-      </a>
-    </li>
-  
-
-            
-          
         </ul>
       </nav>
     </li>
@@ -1297,18 +760,1256 @@
     <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_7" type="checkbox" id="__nav_7" >
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          Workflows & Nodes
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Workflows & Nodes
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nodes/communityNodes/" class="md-nav__link">
+        Community Nodes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nodes/exampleWorkflows/" class="md-nav__link">
+        Example Workflows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nodes/overview/" class="md-nav__link">
+        Nodes Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nodes/defaultNodes/" class="md-nav__link">
+        List of Default Nodes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nodes/NODES/" class="md-nav__link">
+        Workflow Editor Usage
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nodes/comfyToInvoke/" class="md-nav__link">
+        ComfyUI to InvokeAI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nodes/detailedNodes/faceTools/" class="md-nav__link">
+        Facetool Node
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nodes/contributingNodes/" class="md-nav__link">
+        Contributing Nodes
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
       
       
-        <label class="md-nav__link" for="__nav_7">
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+      
+      
+        
+          
+            
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        
+        
+        <div class="md-nav__link md-nav__link--index ">
+          <a href="../">Features</a>
+          
+            <label for="__nav_4">
+              <span class="md-nav__icon md-icon"></span>
+            </label>
+          
+        </div>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Features
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../help/gettingStartedWithAI/" class="md-nav__link">
+        New to InvokeAI?
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CONFIGURATION/" class="md-nav__link">
+        Configuration
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CONTROLNET/" class="md-nav__link">
+        Control Adapters
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../IMG2IMG/" class="md-nav__link">
+        Image-to-Image
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LOGGING/" class="md-nav__link">
+        Controlling Logging
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LORAS/" class="md-nav__link">
+        LoRAs & LCM-LoRAs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MODEL_MERGING/" class="md-nav__link">
+        Model Merging
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nodes/overview/" class="md-nav__link">
+        Nodes & Workflows
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WATERMARK%2BNSFW/" class="md-nav__link">
+        NSFW Checker
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../POSTPROCESS/" class="md-nav__link">
+        Postprocessing
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Prompting Features
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Prompting Features
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-syntax-features" class="md-nav__link">
+    Prompt Syntax Features
+  </a>
+  
+    <nav class="md-nav" aria-label="Prompt Syntax Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attention-weighting" class="md-nav__link">
+    Attention weighting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompt-blending" class="md-nav__link">
+    Prompt Blending
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#prompt-conjunction" class="md-nav__link">
+    Prompt Conjunction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cross-attention-control-prompt2prompt" class="md-nav__link">
+    Cross-Attention Control ('prompt2prompt')
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#escaping-parentheses-and-speech-marks" class="md-nav__link">
+    Escaping parentheses and speech marks
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prompt-blending_1" class="md-nav__link">
+    Prompt Blending
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-prompts" class="md-nav__link">
+    Dynamic Prompts
+  </a>
+  
+    <nav class="md-nav" aria-label="Dynamic Prompts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#structure-of-a-dynamic-prompt" class="md-nav__link">
+    Structure of a Dynamic Prompt
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creating-dynamic-prompts" class="md-nav__link">
+    Creating Dynamic Prompts
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#how-dynamic-prompts-work" class="md-nav__link">
+    How Dynamic Prompts Work
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tips-and-tricks-for-using-dynamic-prompts" class="md-nav__link">
+    Tips and Tricks for Using Dynamic Prompts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sdxl-prompting" class="md-nav__link">
+    SDXL Prompting
+  </a>
+  
+    <nav class="md-nav" aria-label="SDXL Prompting">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prompting" class="md-nav__link">
+    Prompting
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#concatenated-prompts" class="md-nav__link">
+    Concatenated Prompts
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_13" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_4_13" id="__nav_4_13_label" tabindex="0">
+          Textual Inversions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_13_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4_13">
+          <span class="md-nav__icon md-icon"></span>
+          Textual Inversions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TEXTUAL_INVERSIONS/" class="md-nav__link">
+        Textual Inversions
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../TRAINING/" class="md-nav__link">
+        Textual Inversion Training
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UNIFIED_CANVAS/" class="md-nav__link">
+        Unified Canvas
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WEB/" class="md-nav__link">
+        InvokeAI Web Server
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../WEBUIHOTKEYS/" class="md-nav__link">
+        WebUI Hotkeys
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../UTILITIES/" class="md-nav__link">
+        Maintenance Utilities
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../OTHER/" class="md-nav__link">
+        Other
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          Contributing
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Contributing
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/CONTRIBUTING/" class="md-nav__link">
+        How to Contribute
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CODE_OF_CONDUCT/" class="md-nav__link">
+        InvokeAI Code of Conduct
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_3" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_5_3" id="__nav_5_3_label" tabindex="0">
+          Development
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_3_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5_3">
+          <span class="md-nav__icon md-icon"></span>
+          Development
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/contribution_guides/development/" class="md-nav__link">
+        Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/contribution_guides/newContributorChecklist/" class="md-nav__link">
+        New Contributors
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/ARCHITECTURE/" class="md-nav__link">
+        InvokeAI Architecture
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/contribution_guides/contributingToFrontend/" class="md-nav__link">
+        Frontend Documentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/LOCAL_DEVELOPMENT/" class="md-nav__link">
+        Local Development
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/TESTS/" class="md-nav__link">
+        Adding Tests
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/contribution_guides/documentation/" class="md-nav__link">
+        Documentation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/INVOCATIONS/" class="md-nav__link">
+        Nodes
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/contribution_guides/translation/" class="md-nav__link">
+        Translation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contributing/contribution_guides/tutorials/" class="md-nav__link">
+        Tutorials
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CHANGELOG/" class="md-nav__link">
+        Changelog
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          Deprecated
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_7">
+          <span class="md-nav__icon md-icon"></span>
+          Deprecated
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deprecated/CLI/" class="md-nav__link">
+        Command Line Interface
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deprecated/VARIATIONS/" class="md-nav__link">
+        Variations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deprecated/TRANSLATION/" class="md-nav__link">
+        Translations
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deprecated/EMBIGGEN/" class="md-nav__link">
+        Embiggen
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deprecated/INPAINTING/" class="md-nav__link">
+        Inpainting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../deprecated/OUTPAINTING/" class="md-nav__link">
+        Outpainting
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../help/deprecated/TROUBLESHOOT/" class="md-nav__link">
+        Troubleshooting
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+      
+      
+        
+          
+        
+          
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          Help
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_8">
+          <span class="md-nav__icon md-icon"></span>
+          Help
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../help/gettingStartedWithAI/" class="md-nav__link">
+        Getting Started
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../help/FAQ/" class="md-nav__link">
+        FAQs
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../help/diffusion/" class="md-nav__link">
+        Diffusion Overview
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../help/SAMPLER_CONVERGENCE/" class="md-nav__link">
+        Sampler Convergence
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+      <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+      
+      
+        
+          
+        
+          
+        
+      
+      
+        <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
           Other
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Other" data-md-level="1">
-        <label class="md-nav__title" for="__nav_7">
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_9">
           <span class="md-nav__icon md-icon"></span>
           Other
         </label>
@@ -1335,21 +2036,7 @@
   
     <li class="md-nav__item">
       <a href="../../other/README-CompViz/" class="md-nav__link">
-        CompViz-Readme
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../other/TRANSLATION/" class="md-nav__link">
-        Translation
+        CompViz-README
       </a>
     </li>
   
@@ -1376,103 +2063,11 @@
                 
                   
 
-  <a href="https://github.com/invoke-ai/InvokeAI/edit/main/docs/features/PROMPTS.md" title="Edit this page" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8 12h8v2H8v-2m2 8H6V4h7v5h5v3.1l2-2V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4v-2m-2-2h4.1l.9-.9V16H8v2m12.2-5c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
-  </a>
+  
+  
 
 
-<h1 id="prompting-features"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.045 18.894 9.94 12 3.045 5.106a.75.75 0 0 1 1.06-1.061l7.425 7.425a.75.75 0 0 1 0 1.06l-7.424 7.425a.75.75 0 0 1-1.061-1.06zm8.205.606a.75.75 0 0 0 0 1.5h9.5a.75.75 0 0 0 0-1.5h-9.5z"/></svg></span> Prompting-Features<a class="headerlink" href="#prompting-features" title="Permanent link">#</a></h1>
-<h2 id="reading-prompts-from-a-file"><strong>Reading Prompts from a File</strong><a class="headerlink" href="#reading-prompts-from-a-file" title="Permanent link">#</a></h2>
-<p>You can automate <code>invoke.py</code> by providing a text file with the prompts you want
-to run, one line per prompt. The text file must be composed with a text editor
-(e.g. Notepad) and not a word processor. Each line should look like what you
-would type at the invoke&gt; prompt:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="s2">&quot;a beautiful sunny day in the park, children playing&quot;</span><span class="w"> </span>-n4<span class="w"> </span>-C10
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="s2">&quot;stormy weather on a mountain top, goats grazing&quot;</span><span class="w"> </span>-s100
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="s2">&quot;innovative packaging for a squid&#39;s dinner&quot;</span><span class="w"> </span>-S137038382
-</code></pre></div>
-<p>Then pass this file's name to <code>invoke.py</code> when you invoke it:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python<span class="w"> </span>scripts/invoke.py<span class="w"> </span>--from_file<span class="w"> </span><span class="s2">&quot;/path/to/prompts.txt&quot;</span>
-</code></pre></div>
-<p>You may also read a series of prompts from standard input by providing
-a filename of <code>-</code>. For example, here is a python script that creates a
-matrix of prompts, each one varying slightly:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="ch">#!/usr/bin/env python</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nv">adjectives</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;sunny&#39;</span>,<span class="s1">&#39;rainy&#39;</span>,<span class="s1">&#39;overcast&#39;</span><span class="o">]</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="nv">samplers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="s1">&#39;k_lms&#39;</span>,<span class="s1">&#39;k_euler_a&#39;</span>,<span class="s1">&#39;k_heun&#39;</span><span class="o">]</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nv">cfg</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">[</span><span class="m">7</span>.5,<span class="w"> </span><span class="m">9</span>,<span class="w"> </span><span class="m">11</span><span class="o">]</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="k">for</span><span class="w"> </span>adj<span class="w"> </span><span class="k">in</span><span class="w"> </span>adjectives:
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span>samp<span class="w"> </span><span class="k">in</span><span class="w"> </span>samplers:
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span>cg<span class="w"> </span><span class="k">in</span><span class="w"> </span>cfg:
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">            </span>print<span class="o">(</span>f<span class="s1">&#39;a {adj} day -A{samp} -C{cg}&#39;</span><span class="o">)</span>
-</code></pre></div>
-<p>Its output looks like this (abbreviated):</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>a<span class="w"> </span>sunny<span class="w"> </span>day<span class="w"> </span>-Aklms<span class="w"> </span>-C7.5
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>a<span class="w"> </span>sunny<span class="w"> </span>day<span class="w"> </span>-Aklms<span class="w"> </span>-C9
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>a<span class="w"> </span>sunny<span class="w"> </span>day<span class="w"> </span>-Aklms<span class="w"> </span>-C11
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>a<span class="w"> </span>sunny<span class="w"> </span>day<span class="w"> </span>-Ak_euler_a<span class="w"> </span>-C7.5
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>a<span class="w"> </span>sunny<span class="w"> </span>day<span class="w"> </span>-Ak_euler_a<span class="w"> </span>-C9
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>...
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>a<span class="w"> </span>overcast<span class="w"> </span>day<span class="w"> </span>-Ak_heun<span class="w"> </span>-C9
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>a<span class="w"> </span>overcast<span class="w"> </span>day<span class="w"> </span>-Ak_heun<span class="w"> </span>-C11
-</code></pre></div>
-<p>To feed it to invoke.py, pass the filename of "-"</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>python<span class="w"> </span>matrix.py<span class="w"> </span><span class="p">|</span><span class="w"> </span>python<span class="w"> </span>scripts/invoke.py<span class="w"> </span>--from_file<span class="w"> </span>-
-</code></pre></div>
-<p>When the script is finished, each of the 27 combinations
-of adjective, sampler and CFG will be executed.</p>
-<p>The command-line interface provides <code>!fetch</code> and <code>!replay</code> commands
-which allow you to read the prompts from a single previously-generated
-image or a whole directory of them, write the prompts to a file, and
-then replay them. Or you can create your own file of prompts and feed
-them to the command-line client from within an interactive session.
-See <a href="../CLI/">Command-Line Interface</a> for details.</p>
-<hr />
-<h2 id="negative-and-unconditioned-prompts"><strong>Negative and Unconditioned Prompts</strong><a class="headerlink" href="#negative-and-unconditioned-prompts" title="Permanent link">#</a></h2>
-<p>Any words between a pair of square brackets will instruct Stable Diffusion to
-attempt to ban the concept from the generated image.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>this is a test prompt [not really] to make you understand [cool] how this works.
-</code></pre></div>
-<p>In the above statement, the words 'not really cool` will be ignored by Stable
-Diffusion.</p>
-<p>Here's a prompt that depicts what it does.</p>
-<p>original prompt:</p>
-<p><code class="highlight"><span class="s2">&quot;A fantastical translucent pony made of water and foam, ethereal, radiant, hyperalism, scottish folklore, digital painting, artstation, concept art, smooth, 8 k frostbite 3 engine, ultra detailed, art by artgerm and greg rutkowski and magali villeneuve&quot;</span><span class="w"> </span>-s<span class="w"> </span><span class="m">20</span><span class="w"> </span>-W<span class="w"> </span><span class="m">512</span><span class="w"> </span>-H<span class="w"> </span><span class="m">768</span><span class="w"> </span>-C<span class="w"> </span><span class="m">7</span>.5<span class="w"> </span>-A<span class="w"> </span>k_euler_a<span class="w"> </span>-S<span class="w"> </span><span class="m">1654590180</span></code></p>
-<figure>
-<p><img alt="step1" src="../../assets/negative_prompt_walkthru/step1.png" /></p>
-</figure>
-<p>That image has a woman, so if we want the horse without a rider, we can
-influence the image not to have a woman by putting [woman] in the prompt, like
-this:</p>
-<p><code class="highlight"><span class="s2">&quot;A fantastical translucent poney made of water and foam, ethereal, radiant, hyperalism, scottish folklore, digital painting, artstation, concept art, smooth, 8 k frostbite 3 engine, ultra detailed, art by artgerm and greg rutkowski and magali villeneuve [woman]&quot;</span><span class="w"> </span>-s<span class="w"> </span><span class="m">20</span><span class="w"> </span>-W<span class="w"> </span><span class="m">512</span><span class="w"> </span>-H<span class="w"> </span><span class="m">768</span><span class="w"> </span>-C<span class="w"> </span><span class="m">7</span>.5<span class="w"> </span>-A<span class="w"> </span>k_euler_a<span class="w"> </span>-S<span class="w"> </span><span class="m">1654590180</span></code></p>
-<figure>
-<p><img alt="step2" src="../../assets/negative_prompt_walkthru/step2.png" /></p>
-</figure>
-<p>That's nice - but say we also don't want the image to be quite so blue. We can
-add "blue" to the list of negative prompts, so it's now [woman blue]:</p>
-<p><code class="highlight"><span class="s2">&quot;A fantastical translucent poney made of water and foam, ethereal, radiant, hyperalism, scottish folklore, digital painting, artstation, concept art, smooth, 8 k frostbite 3 engine, ultra detailed, art by artgerm and greg rutkowski and magali villeneuve [woman blue]&quot;</span><span class="w"> </span>-s<span class="w"> </span><span class="m">20</span><span class="w"> </span>-W<span class="w"> </span><span class="m">512</span><span class="w"> </span>-H<span class="w"> </span><span class="m">768</span><span class="w"> </span>-C<span class="w"> </span><span class="m">7</span>.5<span class="w"> </span>-A<span class="w"> </span>k_euler_a<span class="w"> </span>-S<span class="w"> </span><span class="m">1654590180</span></code></p>
-<figure>
-<p><img alt="step3" src="../../assets/negative_prompt_walkthru/step3.png" /></p>
-</figure>
-<p>Getting close - but there's no sense in having a saddle when our horse doesn't
-have a rider, so we'll add one more negative prompt: [woman blue saddle].</p>
-<p><code class="highlight"><span class="s2">&quot;A fantastical translucent poney made of water and foam, ethereal, radiant, hyperalism, scottish folklore, digital painting, artstation, concept art, smooth, 8 k frostbite 3 engine, ultra detailed, art by artgerm and greg rutkowski and magali villeneuve [woman blue saddle]&quot;</span><span class="w"> </span>-s<span class="w"> </span><span class="m">20</span><span class="w"> </span>-W<span class="w"> </span><span class="m">512</span><span class="w"> </span>-H<span class="w"> </span><span class="m">768</span><span class="w"> </span>-C<span class="w"> </span><span class="m">7</span>.5<span class="w"> </span>-A<span class="w"> </span>k_euler_a<span class="w"> </span>-S<span class="w"> </span><span class="m">1654590180</span></code></p>
-<figure>
-<p><img alt="step4" src="../../assets/negative_prompt_walkthru/step4.png" /></p>
-</figure>
-<div class="admonition notes">
-<p class="admonition-title">Notes about this feature:</p>
-<ul>
-<li>The only requirement for words to be ignored is that they are in between a pair of square brackets.</li>
-<li>You can provide multiple words within the same bracket.</li>
-<li>You can provide multiple brackets with multiple words in different places of your prompt. That works just fine.</li>
-<li>To improve typical anatomy problems, you can add negative prompts like <code>[bad anatomy, extra legs, extra arms, extra fingers, poorly drawn hands, poorly drawn feet, disfigured, out of frame, tiling, bad art, deformed, mutated]</code>.</li>
-</ul>
-</div>
-<hr />
+<h1 id="prompting-features"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3.045 18.894 9.94 12 3.045 5.106a.75.75 0 0 1 1.06-1.061l7.425 7.425a.75.75 0 0 1 0 1.06l-7.424 7.425a.75.75 0 0 1-1.061-1.06Zm8.205.606a.75.75 0 0 0 0 1.5h9.5a.75.75 0 0 0 0-1.5h-9.5Z"/></svg></span> Prompting-Features<a class="headerlink" href="#prompting-features" title="Permanent link">#</a></h1>
 <h2 id="prompt-syntax-features"><strong>Prompt Syntax Features</strong><a class="headerlink" href="#prompt-syntax-features" title="Permanent link">#</a></h2>
 <p>The InvokeAI prompting language has the following features:</p>
 <h3 id="attention-weighting">Attention weighting<a class="headerlink" href="#attention-weighting" title="Permanent link">#</a></h3>
@@ -1493,9 +2088,6 @@ term).</p>
   <code>a tall thin man (picking (apricots)1.3)1.1</code>. (<code>+</code> is equivalent to 1.1, <code>++</code>
   is pow(1.1,2), <code>+++</code> is pow(1.1,3), etc; <code>-</code> means 0.9, <code>--</code> means pow(0.9,2),
   etc.)</li>
-<li>attention also applies to <code>[unconditioning]</code> so
-  <code>a tall thin man picking apricots [(ladder)0.01]</code> will <em>very gently</em> nudge SD
-  away from trying to draw the man on a ladder</li>
 </ul>
 <p>You can use this to increase or decrease the amount of something. Starting from
 this prompt of <code>a man picking apricots from a tree</code>, let's see what happens if
@@ -1583,7 +2175,7 @@ example, below is a <code>mountain man</code>:</p>
 </tr>
 </tbody>
 </table>
-<h3 id="blending-between-prompts">Blending between prompts<a class="headerlink" href="#blending-between-prompts" title="Permanent link">#</a></h3>
+<h3 id="prompt-blending">Prompt Blending<a class="headerlink" href="#prompt-blending" title="Permanent link">#</a></h3>
 <ul>
 <li><code>("a tall thin man picking apricots", "a tall thin man picking pears").blend(1,1)</code></li>
 <li>The existing prompt blending using <code>:&lt;weight&gt;</code> will continue to be supported -
@@ -1600,6 +2192,15 @@ example, below is a <code>mountain man</code>:</p>
 </ul>
 <p>See the section below on "Prompt Blending" for more information about how this
 works.</p>
+<h3 id="prompt-conjunction">Prompt Conjunction<a class="headerlink" href="#prompt-conjunction" title="Permanent link">#</a></h3>
+<p>Join multiple clauses together to create a conjoined prompt. Each clause will be passed to CLIP separately. </p>
+<p>For example, the prompt: </p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="s2">&quot;A mystical valley surround by towering granite cliffs, watercolor, warm&quot;</span>
+</code></pre></div>
+<p>Can be used with .and():
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="o">(</span><span class="s2">&quot;A mystical valley&quot;</span>,<span class="w"> </span><span class="s2">&quot;surround by towering granite cliffs&quot;</span>,<span class="w"> </span><span class="s2">&quot;watercolor&quot;</span>,<span class="w"> </span><span class="s2">&quot;warm&quot;</span><span class="o">)</span>.and<span class="o">()</span>
+</code></pre></div></p>
+<p>Each will give you different results - try them out and see what you prefer!</p>
 <h3 id="cross-attention-control-prompt2prompt">Cross-Attention Control ('prompt2prompt')<a class="headerlink" href="#cross-attention-control-prompt2prompt" title="Permanent link">#</a></h3>
 <p>Sometimes an image you generate is almost right, and you just want to change one
 detail without affecting the rest. You could use a photo editor and inpainting
@@ -1629,7 +2230,7 @@ words in a new prompt. This works for <code>img2img</code> as well.</p>
   - To swap a comma, use quotes: `a (&quot;fluffy, grey cat&quot;).swap(&quot;big, barking dog&quot;) playing with a ball in the forest`.
 </code></pre></div>
 <ul>
-<li>Supports options <code>t_start</code> and <code>t_end</code> (each 0-1) loosely corresponding to bloc97's <code>prompt_edit_tokens_start/_end</code> but with the math swapped to make it easier to
+<li>Supports options <code>t_start</code> and <code>t_end</code> (each 0-1) loosely corresponding to (bloc97's)[(<a href="https://github.com/bloc97/CrossAttentionControl">https://github.com/bloc97/CrossAttentionControl</a>)] <code>prompt_edit_tokens_start/_end</code> but with the math swapped to make it easier to
   intuitively understand. <code>t_start</code> and <code>t_end</code> are used to control on which steps cross-attention control should run. With the default values <code>t_start=0</code> and <code>t_end=1</code>, cross-attention control is active on every step of image generation. Other values can be used to turn cross-attention control off for part of the image generation process.<ul>
 <li>For example, if doing a diffusion with 10 steps for the prompt is <code>a cat.swap(dog, t_start=0.3, t_end=1.0) playing with a ball in the forest</code>, the first 3 steps will be run as <code>a cat playing with a ball in the forest</code>, while the last 7 steps will run as <code>a dog playing with a ball in the forest</code>, but the pixels that represent <code>dog</code> will be locked to the pixels that would have represented <code>cat</code> if the <code>cat</code> prompt had been used instead.</li>
 <li>Conversely, for <code>a cat.swap(dog, t_start=0, t_end=0.7) playing with a ball in the forest</code>, the first 7 steps will run as <code>a dog playing with a ball in the forest</code> with the pixels that represent <code>dog</code> locked to the same pixels that would have represented <code>cat</code> if the <code>cat</code> prompt was being used instead. The final 3 steps will just run <code>a cat playing with a ball in the forest</code>.<blockquote>
@@ -1642,87 +2243,105 @@ words in a new prompt. This works for <code>img2img</code> as well.</p>
 <p>Prompt2prompt <code>.swap()</code> is not compatible with xformers, which will be temporarily disabled when doing a <code>.swap()</code> - so you should expect to use more VRAM and run slower that with xformers enabled.</p>
 <p>The <code>prompt2prompt</code> code is based off
 <a href="https://github.com/bloc97/CrossAttentionControl">bloc97's colab</a>.</p>
-<p>Note that <code>prompt2prompt</code> is not currently working with the runwayML inpainting
-model, and may never work due to the way this model is set up. If you attempt to
-use <code>prompt2prompt</code> you will get the original image back. However, since this
-model is so good at inpainting, a good substitute is to use the <code>clipseg</code> text
-masking option:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>invoke&gt;<span class="w"> </span>a<span class="w"> </span>fluffy<span class="w"> </span>cat<span class="w"> </span>eating<span class="w"> </span>a<span class="w"> </span>hotdog
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>Outputs:
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="o">[</span><span class="m">1010</span><span class="o">]</span><span class="w"> </span>outputs/000025.2182095108.png:<span class="w"> </span>a<span class="w"> </span>fluffy<span class="w"> </span>cat<span class="w"> </span>eating<span class="w"> </span>a<span class="w"> </span>hotdog
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>invoke&gt;<span class="w"> </span>a<span class="w"> </span>smiling<span class="w"> </span>dog<span class="w"> </span>eating<span class="w"> </span>a<span class="w"> </span>hotdog<span class="w"> </span>-I<span class="w"> </span><span class="m">000025</span>.2182095108.png<span class="w"> </span>-tm<span class="w"> </span>cat
-</code></pre></div>
-<h3 id="escaping-parantheses-and-speech-marks">Escaping parantheses () and speech marks ""<a class="headerlink" href="#escaping-parantheses-and-speech-marks" title="Permanent link">#</a></h3>
+<h3 id="escaping-parentheses-and-speech-marks">Escaping parentheses and speech marks<a class="headerlink" href="#escaping-parentheses-and-speech-marks" title="Permanent link">#</a></h3>
 <p>If the model you are using has parentheses () or speech marks "" as part of its
 syntax, you will need to "escape" these using a backslash, so that<code>(my_keyword)</code>
 becomes <code>\(my_keyword\)</code>. Otherwise, the prompt parser will attempt to interpret
 the parentheses as part of the prompt syntax and it will get confused.</p>
 <hr />
-<h2 id="prompt-blending"><strong>Prompt Blending</strong><a class="headerlink" href="#prompt-blending" title="Permanent link">#</a></h2>
-<p>You may blend together different sections of the prompt to explore the AI's
+<h2 id="prompt-blending_1"><strong>Prompt Blending</strong><a class="headerlink" href="#prompt-blending_1" title="Permanent link">#</a></h2>
+<p>You may blend together prompts to explore the AI's
 latent semantic space and generate interesting (and often surprising!)
 variations. The syntax is:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>blue<span class="w"> </span>sphere:0.25<span class="w"> </span>red<span class="w"> </span>cube:0.75<span class="w"> </span>hybrid
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="o">(</span><span class="s2">&quot;prompt #1&quot;</span>,<span class="w"> </span><span class="s2">&quot;prompt #2&quot;</span><span class="o">)</span>.blend<span class="o">(</span><span class="m">0</span>.25,<span class="w"> </span><span class="m">0</span>.75<span class="o">)</span>
 </code></pre></div>
-<p>This will tell the sampler to blend 25% of the concept of a blue sphere with 75%
-of the concept of a red cube. The blend weights can use any combination of
-integers and floating point numbers, and they do not need to add up to 1.
-Everything to the left of the <code>:XX</code> up to the previous <code>:XX</code> is used for
-merging, so the overall effect is:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="m">0</span>.25<span class="w"> </span>*<span class="w"> </span><span class="s2">&quot;blue sphere&quot;</span><span class="w"> </span>+<span class="w"> </span><span class="m">0</span>.75<span class="w"> </span>*<span class="w"> </span><span class="s2">&quot;white duck&quot;</span><span class="w"> </span>+<span class="w"> </span>hybrid
-</code></pre></div>
+<p>This will tell the sampler to blend 25% of the concept of prompt <a class="magiclink magiclink-github magiclink-issue" href="https://github.com/invoke-ai/InvokeAI/issues/1" title="GitHub Issue: invoke-ai/InvokeAI #1">#1</a> with 75%
+of the concept of prompt <a class="magiclink magiclink-github magiclink-issue" href="https://github.com/invoke-ai/InvokeAI/issues/2" title="GitHub Issue: invoke-ai/InvokeAI #2">#2</a>. It is recommended to keep the sum of the weights to around 1.0, but interesting things might happen if you go outside of this range.</p>
 <p>Because you are exploring the "mind" of the AI, the AI's way of mixing two
 concepts may not match yours, leading to surprising effects. To illustrate, here
 are three images generated using various combinations of blend weights. As
 usual, unless you fix the seed, the prompts will give you different results each
 time you run them.</p>
-<figure>
-<h3 id="blue-sphere-red-cube-hybrid">"blue sphere, red cube, hybrid"<a class="headerlink" href="#blue-sphere-red-cube-hybrid" title="Permanent link">#</a></h3>
-</figure>
-<p>This example doesn't use melding at all and represents the default way of mixing
+<p>Let's examine how this affects image generation results:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="s2">&quot;blue sphere, red cube, hybrid&quot;</span>
+</code></pre></div>
+<p>This example doesn't use blending at all and represents the default way of mixing
 concepts.</p>
 <figure>
 <p><img alt="blue-sphere-red-cube-hyprid" src="../../assets/prompt-blending/blue-sphere-red-cube-hybrid.png" /></p>
 </figure>
-<p>It's interesting to see how the AI expressed the concept of "cube" as the four
-quadrants of the enclosing frame. If you look closely, there is depth there, so
-the enclosing frame is actually a cube.</p>
+<p>It's interesting to see how the AI expressed the concept of "cube" within the sphere. If you look closely, there is depth there, so the enclosing frame is actually a cube.</p>
 <figure>
-<h3 id="blue-sphere025-red-cube075-hybrid">"blue sphere:0.25 red cube:0.75 hybrid"<a class="headerlink" href="#blue-sphere025-red-cube075-hybrid" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="o">(</span><span class="s2">&quot;blue sphere&quot;</span>,<span class="w"> </span><span class="s2">&quot;red cube&quot;</span><span class="o">)</span>.blend<span class="o">(</span><span class="m">0</span>.25,<span class="w"> </span><span class="m">0</span>.75<span class="o">)</span>
+</code></pre></div>
 <p><img alt="blue-sphere-25-red-cube-75" src="../../assets/prompt-blending/blue-sphere-0.25-red-cube-0.75-hybrid.png" /></p>
 </figure>
-<p>Now that's interesting. We get neither a blue sphere nor a red cube, but a red
-sphere embedded in a brick wall, which represents a melding of concepts within
-the AI's "latent space" of semantic representations. Where is Ludwig
-Wittgenstein when you need him?</p>
+<p>Now that's interesting. We get an image with a resemblance of a red cube, with a hint of blue shadows which represents a melding of concepts within the AI's "latent space" of semantic representations. </p>
 <figure>
-<h3 id="blue-sphere075-red-cube025-hybrid">"blue sphere:0.75 red cube:0.25 hybrid"<a class="headerlink" href="#blue-sphere075-red-cube025-hybrid" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="o">(</span><span class="s2">&quot;blue sphere&quot;</span>,<span class="w"> </span><span class="s2">&quot;red cube&quot;</span><span class="o">)</span>.blend<span class="o">(</span><span class="m">0</span>.75,<span class="w"> </span><span class="m">0</span>.25<span class="o">)</span>
+</code></pre></div>
 <p><img alt="blue-sphere-75-red-cube-25" src="../../assets/prompt-blending/blue-sphere-0.75-red-cube-0.25-hybrid.png" /></p>
 </figure>
-<p>Definitely more blue-spherey. The cube is gone entirely, but it's really cool
-abstract art.</p>
+<p>Definitely more blue-spherey. </p>
 <figure>
-<h3 id="blue-sphere05-red-cube05-hybrid">"blue sphere:0.5 red cube:0.5 hybrid"<a class="headerlink" href="#blue-sphere05-red-cube05-hybrid" title="Permanent link">#</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="o">(</span><span class="s2">&quot;blue sphere&quot;</span>,<span class="w"> </span><span class="s2">&quot;red cube&quot;</span><span class="o">)</span>.blend<span class="o">(</span><span class="m">0</span>.5,<span class="w"> </span><span class="m">0</span>.5<span class="o">)</span>
+</code></pre></div>
+</figure>
+<figure>
 <p><img alt="blue-sphere-5-red-cube-5-hybrid" src="../../assets/prompt-blending/blue-sphere-0.5-red-cube-0.5-hybrid.png" /></p>
 </figure>
-<p>Whoa...! I see blue and red, but no spheres or cubes. Is the word "hybrid"
-summoning up the concept of some sort of scifi creature? Let's find out.</p>
+<p>Whoa...! I see blue and red, and if I squint, spheres and cubes.</p>
+<h2 id="dynamic-prompts">Dynamic Prompts<a class="headerlink" href="#dynamic-prompts" title="Permanent link">#</a></h2>
+<p>Dynamic Prompts are a powerful feature designed to produce a variety of prompts based on user-defined options. Using a special syntax, you can construct a prompt with multiple possibilities, and the system will automatically generate a series of permutations based on your settings. This is extremely beneficial for ideation, exploring various scenarios, or testing different concepts swiftly and efficiently.</p>
+<h3 id="structure-of-a-dynamic-prompt">Structure of a Dynamic Prompt<a class="headerlink" href="#structure-of-a-dynamic-prompt" title="Permanent link">#</a></h3>
+<p>A Dynamic Prompt comprises of regular text, supplemented with alternatives enclosed within curly braces {} and separated by a vertical bar |. For example: {option1|option2|option3}. The system will then select one of the options to include in the final prompt. This flexible system allows for options to be placed throughout the text as needed.</p>
+<p>Furthermore, Dynamic Prompts can designate multiple selections from a single group of options. This feature is triggered by prefixing the options with a numerical value followed by <span class="arithmatex">\(<span class="arithmatex">\(. For example, in {2\)</span>\)</span>option1|option2|option3}, the system will select two distinct options from the set.</p>
+<h3 id="creating-dynamic-prompts">Creating Dynamic Prompts<a class="headerlink" href="#creating-dynamic-prompts" title="Permanent link">#</a></h3>
+<p>To create a Dynamic Prompt, follow these steps:</p>
+<div class="highlight"><pre><span></span><code>Draft your sentence or phrase, identifying words or phrases with multiple possible options.
+Encapsulate the different options within curly braces {}.
+Within the braces, separate each option using a vertical bar |.
+If you want to include multiple options from a single group, prefix with the desired number and $$.
+</code></pre></div>
+<p>For instance: A {house|apartment|lodge|cottage} in {summer|winter|autumn|spring} designed in {style1|style2|style3}.</p>
+<h3 id="how-dynamic-prompts-work">How Dynamic Prompts Work<a class="headerlink" href="#how-dynamic-prompts-work" title="Permanent link">#</a></h3>
+<p>Once a Dynamic Prompt is configured, the system generates an array of combinations using the options provided. Each group of options in curly braces is treated independently, with the system selecting one option from each group. For a prefixed set (e.g., 2$$), the system will select two distinct options.</p>
+<p>For example, the following prompts could be generated from the above Dynamic Prompt:</p>
+<div class="highlight"><pre><span></span><code>A house in summer designed in style1, style2
+A lodge in autumn designed in style3, style1
+A cottage in winter designed in style2, style3
+And many more!
+</code></pre></div>
+<p>When the <code>Combinatorial</code> setting is on, Invoke will disable the "Images" selection, and generate every combination up until the setting for Max Prompts is reached.
+When the <code>Combinatorial</code> setting is off, Invoke will randomly generate combinations up until the setting for Images has been reached.</p>
+<h3 id="tips-and-tricks-for-using-dynamic-prompts">Tips and Tricks for Using Dynamic Prompts<a class="headerlink" href="#tips-and-tricks-for-using-dynamic-prompts" title="Permanent link">#</a></h3>
+<p>Below are some useful strategies for creating Dynamic Prompts:</p>
+<div class="highlight"><pre><span></span><code>Utilize Dynamic Prompts to generate a wide spectrum of prompts, perfect for brainstorming and exploring diverse ideas.
+Ensure that the options within a group are contextually relevant to the part of the sentence where they are used. For instance, group building types together, and seasons together.
+Apply the 2$$ prefix when you want to incorporate more than one option from a single group. This becomes quite handy when mixing and matching different elements.
+Experiment with different quantities for the prefix. For example, 3$$ will select three distinct options.
+Be aware of coherence in your prompts. Although the system can generate all possible combinations, not all may semantically make sense. Therefore, carefully choose the options for each group.
+Always review and fine-tune the generated prompts as needed. While Dynamic Prompts can help you generate a multitude of combinations, the final polishing and refining remain in your hands.
+</code></pre></div>
+<h2 id="sdxl-prompting">SDXL Prompting<a class="headerlink" href="#sdxl-prompting" title="Permanent link">#</a></h2>
+<p>Prompting with SDXL is slightly different than prompting with SD1.5 or SD2.1 models - SDXL expects a prompt <em>and</em> a style. </p>
+<h3 id="prompting">Prompting<a class="headerlink" href="#prompting" title="Permanent link">#</a></h3>
 <figure>
-<h3 id="blue-sphere05-red-cube05">"blue sphere:0.5 red cube:0.5"<a class="headerlink" href="#blue-sphere05-red-cube05" title="Permanent link">#</a></h3>
-<p><img alt="blue-sphere-5-red-cube-5" src="../../assets/prompt-blending/blue-sphere-0.5-red-cube-0.5.png" /></p>
+<p><img alt="SDXL prompt boxes in InvokeAI" src="../../assets/prompt_syntax/sdxl-prompt.png" /></p>
 </figure>
-<p>Indeed, removing the word "hybrid" produces an image that is more like what we'd
-expect.</p>
-<p>In conclusion, prompt blending is great for exploring creative space, but can be
-difficult to direct. A forthcoming release of InvokeAI will feature more
-deterministic prompt weighting.</p>
+<p>In the prompt box, enter a positive or negative prompt as you normally would. </p>
+<p>For the style box you can enter a style that you want the image to be generated in. You can use styles from this example list, or any other style you wish: anime, photographic, digital art, comic book, fantasy art, analog film, neon punk, isometric, low poly, origami, line art, cinematic, 3d model, pixel art, etc.</p>
+<h3 id="concatenated-prompts">Concatenated Prompts<a class="headerlink" href="#concatenated-prompts" title="Permanent link">#</a></h3>
+<p>InvokeAI also has the option to concatenate the prompt and style inputs, by pressing the "link" button in the Positive Prompt box. </p>
+<p>This concatenates the prompt &amp; style inputs, and passes the joined prompt and style to the SDXL model. 
+<img alt="SDXL concatenated prompt boxes in InvokeAI" src="../../assets/prompt_syntax/sdxl-prompt-concatenated.png" /></p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 6, 2023</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">September 6, 2023</span>
       
         <br>
         Created:
@@ -1732,6 +2351,8 @@ deterministic prompt weighting.</p>
   </small>
 </div>
 
+
+  
 
 
 
@@ -1743,57 +2364,16 @@ deterministic prompt weighting.</p>
           
         </div>
         
-          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
-            Back to top
-          </a>
-        
       </main>
       
         <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
-      
-        
-        <a href="../POSTPROCESS/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Postprocessing" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Previous
-              </span>
-              Postprocessing
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../TEXTUAL_INVERSION/" class="md-footer__link md-footer__link--next" aria-label="Next: Textual-Inversion" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Textual-Inversion
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-copyright">
   
     <div class="md-copyright__highlight">
-      Copyright &copy; 2022 InvokeAI Team
+      Copyright &copy; 2023 InvokeAI Team
     </div>
   
   
@@ -1813,12 +2393,19 @@ deterministic prompt weighting.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.top", "navigation.tracking", "search.highlight", "search.suggest", "toc.integrate"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tabs", "navigation.tabs.sticky", "navigation.tracking", "navigation.indexes", "navigation.path", "search.highlight", "search.suggest", "toc.integrate"], "search": "../../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      <script src="../../assets/javascripts/bundle.220ee61c.min.js"></script>
       
-    
+        
+          <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+        
+      
+        
+          <script src="../../javascripts/tablesort.js"></script>
+        
+      
     
   </body>
 </html>
